@@ -137,7 +137,7 @@ $(document).ready(() => {
     if(age < 18) {
       
       let div = $('<div>').addClass('user');
-      div.append('<p>Please make sure you\'ve entered a valid date of birth and you\'re over 18 - unfortunately the Rubix Bear eats children</p>');
+      div.append('<p>Please make sure you\'ve entered a valid date of birth and you\'re over 18 - unfortunately the Rubik Bear eats children</p>');
       $('#form').append(div);
       return;
     }
@@ -294,7 +294,7 @@ $(document).ready(() => {
         if(age < 18) {
           
           let div = $('<div>').addClass('user');
-          div.append('<p>Please make sure you\'ve entered a valid date of birth and you\'re over 18 - unfortunately the Rubix Bear eats children</p>');
+          div.append('<p>Please make sure you\'ve entered a valid date of birth and you\'re over 18 - unfortunately the Rubik Bear eats children</p>');
           $('#form').append(div);
           return;
         }
