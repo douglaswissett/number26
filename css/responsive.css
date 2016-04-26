@@ -125,6 +125,10 @@
     margin: 0;
   }
 
+  footer li {
+    display: inline-block;
+  }
+
   footer div {
     margin-top: 15px;
   }
