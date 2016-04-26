@@ -3,7 +3,6 @@
 //  TITLE     - NUMBER26 Coding Challenge
 //  AUTHOR    - DOUGLAS WISSETT WALKER
 //  DATE      - 25/04/2016
-//  VERSION   - 0.0.1
 //
 //**********************************************************************
 
@@ -25,10 +24,6 @@ $(document).ready(() => {
   }
 
 
-
-
-
-
   // function to preview gravitar
   function readURL(input) {
     if (input.files && input.files[0]) {
@@ -40,15 +35,12 @@ $(document).ready(() => {
       reader.readAsDataURL(input.files[0]);
     }
   }
-
-
-
-
+  // read image url of file upload
   $("#imageUpload").change(function(){
       readURL(this);
   });
 
-
+  // scroll down to sign up form
   $('#signUp').click(function(e) {
     e.preventDefault();
     $('html,body').animate({
@@ -57,23 +49,11 @@ $(document).ready(() => {
   });
 
 
-
-
-
-
-
-
   // function to check if valid email was entered
   function validateEmail(email) {
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
   }
-
-
-
-
-
-
 
 
   // fiddle to hide nav bar
@@ -97,16 +77,10 @@ $(document).ready(() => {
 
 
 
-
-
-
-
-
   // default hidden form inputs
   $('.address').hide();
   $('.profile').hide();
   $('.passwordInfo').hide();
-
 
 
   // form navigations
@@ -142,6 +116,7 @@ $(document).ready(() => {
       return;
     }
 
+    // check user selected nationality
     if( $('#nationality').val() == 0 ) {
       let div = $('<div>').addClass('user');
       div.append('<p>Please pick a nationality</p>');
@@ -157,6 +132,7 @@ $(document).ready(() => {
     $('#formBack').click((e) => {
       e.preventDefault();
 
+      // hide and show current form
       $('.address').hide();
       $('.userInfo').show();
     });
@@ -168,15 +144,14 @@ $(document).ready(() => {
       // clear user messages
       $('.user').remove();
 
-      if(!form.address1.value || !form.address2.value ||
-        !form.areacode.value || !form.city.value) {
+      // check user inputs address
+      if(!form.address1.value || !form.areacode.value || !form.city.value) {
 
         let div = $('<div>').addClass('user');
         div.append('<p>Please enter a valid address - don\'t worry, we won\'t drive past late at night to see who\'s home</p>');
         $('#form').append(div);
         return;
       }
-
 
       // hide and show current form page
       $('.address').hide();
@@ -185,9 +160,7 @@ $(document).ready(() => {
       $('#formBack2').click((e) => {
         e.preventDefault();
 
-
-
-
+        // hide and show current form page
         $('.profile').hide();
         $('.address').show();
       });
@@ -197,12 +170,14 @@ $(document).ready(() => {
         // clear user messages
         $('.user').remove();
 
+        // hide and show current form page
         $('.profile').hide();
         $('.passwordInfo').show();
 
         $('#formBack3').click((e) => {
           e.preventDefault();
 
+          // hide and show current form page
           $('.passwordInfo').hide();
           $('.profile').show();
         })
@@ -212,53 +187,29 @@ $(document).ready(() => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
   // password stength checker    Attribution: http://jsfiddle.net/aleem/KE3RB/8/
   $('#pass').keyup(function(e) {
     let strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
     let mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
     let enoughRegex = new RegExp("(?=.{6,}).*", "g");
     if (false == enoughRegex.test($(this).val())) {
-           $('#passstrength').html('More Characters');
+           $('#passstrength').html('Password hint: More Characters');
     } else if (strongRegex.test($(this).val())) {
            $('#passstrength').className = 'ok';
-           $('#passstrength').html('Strong!');
+           $('#passstrength').html('Password hint: Strong!');
     } else if (mediumRegex.test($(this).val())) {
            $('#passstrength').className = 'alert';
-           $('#passstrength').html('Medium!');
+           $('#passstrength').html('Password hint: Medium!');
     } else {
            $('#passstrength').className = 'error';
-           $('#passstrength').html('Weak!');
+           $('#passstrength').html('Password hint: Weak!');
     }
     return true;
   });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // listen to form submit
   $('#form').submit((event)=> {
     // prevent form from submitting
     event.preventDefault();
@@ -266,18 +217,22 @@ $(document).ready(() => {
     // clear user messages
     $('.user').remove();
 
+    // grab form element
     let form = document.getElementById('form');
 
-    if(!form.fullName.value || !form.dob.value || !form.address1.value || !form.address2.value ||
+    // check all inputs are valid
+    if(!form.fullName.value || !form.dob.value || !form.address1.value ||
         !form.areacode.value || !form.city.value || !form.nationality.value || !form.email.value || 
         !form.password.value) {
 
+      // user message
       let div = $('<div>').addClass('user');
       div.append('<p>Slow down there! You still need to provide more information. It\'s ok, have another go and we\'ll wait</p>');
       $('#form').append(div);
 
     } else {
 
+      // check passwords match
       if(form.password.value === form.passwordConfirmation.value) {
 
         // check for three consecutive characters in password
@@ -309,7 +264,7 @@ $(document).ready(() => {
         }
 
 
-        // make ajax to some example.php file
+        // build form object
         let data = {
           fullName: form.fullName.value,
           dob: form.dob.value,
@@ -321,12 +276,14 @@ $(document).ready(() => {
           password: form.password.value
         }
 
+        // make ajax to some example.php file with form object
         $.ajax({
           url: 'example.php',
           type: 'POST',
           data: data
         })
 
+        // user message on form submit
         $('.passwordInfo').hide();
         let h2 = $('<h2>').innerHTML = `Form submitted, welcome ${form.fullName.value}`;
         let div = $('<div>').addClass('submitMessage');
@@ -335,11 +292,11 @@ $(document).ready(() => {
 
       } else {
 
+        // user message if passwords do not match
         let div = $('<div>').addClass('user');
         div.append('<p>Sorry, but just like your outfit, the passwords you\'ve entered don\'t match</p>');
         $('#form').append(div);
       }
     }
   });
-
 });

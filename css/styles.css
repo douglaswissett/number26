@@ -1,3 +1,7 @@
+/*
+  CSS STYLING
+*/
+
 
 html, body {
   margin: 0;
@@ -26,7 +30,6 @@ body {
   font-size: 2.5em;
   color: white;
 }
-
 
 
 
@@ -72,10 +75,15 @@ body {
   animation-direction: normal, alternate;
 }
 
-#signUpLi {
+.bobLi {
   position: relative;
   top: 6px;
 }
+
+
+/*
+  BODY STYLING
+*/
 
 .container {
   /*border: 2px solid blue;*/
@@ -84,8 +92,6 @@ body {
   margin: 0 auto 25px;
   background: white;
 }
-
-
 
 .introImage {
   /*border*/: 2px solid orange;
@@ -226,6 +232,7 @@ button {
   top: 75px;
   left: 100px;
   font-size: 12px;
+  display: block;
 }
 
 .user {
@@ -233,6 +240,11 @@ button {
   text-align: center;
 }
 
+
+
+/*
+  FOOTER STYLING
+*/
 
 footer {
   position: relative;
@@ -272,7 +284,7 @@ footer a:hover {
 
 
 /* 
-  Nav bar hiding css
+  NAVBAR STYLING
 */
 header {
     background: rgb(51,51,51);
