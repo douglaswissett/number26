@@ -1,0 +1,82 @@
+/*
+    Mobile Devices Rescale
+*/
+
+@media screen and (max-width: 480px) {
+    
+    #wrapper {
+        float: left;
+        margin: 0 auto;
+        clear: left;
+        max-width: 100%;
+        padding: 0;
+        
+        overflow: hidden;
+    }
+    
+    #wrapper_contact {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+    }
+    
+    #left_wrapper {
+        min-width: 100%;
+        opacity: .9;
+    }
+    
+    #banner {
+        width: 100%;
+    }
+    
+    header {
+        height: 150px;
+    }
+    
+    .title {
+        font-size: 2em;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav {
+        width: 100%;
+        padding-top: 30px;
+    }
+    
+    nav ul {
+        margin: 0;
+        padding: 0 auto;
+    }
+    
+    nav li {
+        font-size: 0.8em;
+    }
+    
+    #primary {
+        float: left;
+        max-width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 10px 20px 0;
+    }
+    
+    #secondary {
+        float: left;
+        clear: left;
+        max-width: 80%;
+        text-align: left;
+        padding: 0 20px 20px;    
+    }
+    
+    #like {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    
+    #banner2 {
+        background: black;
+        height: 300px;
+    }
+}

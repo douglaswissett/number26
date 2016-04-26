@@ -1,0 +1,292 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 1400px;
+  overflow: auto;
+
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background: #516371;
+}
+
+#header-logo {
+  display: inline-block;
+  margin: 16px;
+}
+
+#company {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  left: 10px;
+  font-size: 2.5em;
+  color: white;
+}
+
+
+
+
+/*
+  NAV
+*/
+
+.nav {
+  display: inline-block;
+  float: right;
+  margin-right: 40px;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: grey;
+}
+
+.bob {
+  -webkit-animation-name: hvr-bob-float, hvr-bob;
+  animation-name: hvr-bob-float, hvr-bob;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+}
+
+#signUpLi {
+  position: relative;
+  top: 6px;
+}
+
+.container {
+  /*border: 2px solid blue;*/
+  width: 85%;
+  height: 100%;
+  margin: 0 auto 25px;
+  background: white;
+}
+
+
+
+.introImage {
+  /*border*/: 2px solid orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../giphy.gif');
+  background-size: cover;
+}
+
+.siteMessage {
+  position: relative;
+  top: 900px;
+  text-align: center;
+}
+
+.form-div {
+  /*border*/: 2px solid blue;
+  width: 80%;
+  height: 500px;
+  margin: 930px auto 0;
+}
+
+.form-header {
+  /*border*/: 2px solid orange;
+  display: inline-block;
+  float: left;
+  margin-top: 75px;
+  margin-left: 20px;
+  max-width: 260px;
+  text-align: center;
+}
+
+#form {
+  /*border*/: 2px solid blue;
+  width: 60%;
+  float: right;
+  height: 400px;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+#form input {
+  display: block;
+  height: 24px;
+  width: 300px;
+  padding: 5px;
+  margin: 22px;
+  margin-left: 100px;
+  margin-bottom: 0;
+}
+
+#form select {
+  /*border*/: 1px solid #111;
+  margin-left: 100px;
+  background: transparent;
+  width: 314px;
+  padding: 5px;
+  font-size: 12px;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#nationality {
+  margin-top: 20px;
+}
+
+#nextBtn {
+  display: block;
+  margin: 40px auto 0;
+}
+
+#formBack {
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+#formNext {
+  margin-left: 151px;
+}
+
+#formBack2 {
+  margin-left: 169px;
+  margin-top: 25px;
+}
+
+#formNext2 {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+#preview {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 100%;
+}
+
+#checkbox {
+  position: relative;
+  top: -44px;
+  left: 210px;
+}
+
+button {
+  background-color: #eee;
+  border-radius: 5px;
+  border: 0;
+  width: 80px;
+  height:25px;
+  font-family: Tahoma;
+}
+
+#formBack3 {
+  position: relative;
+  top: -15px;
+  left: -300px;
+}
+
+#submit {
+  position: relative;
+  top: -40px;
+  left: 250px;
+}
+
+.submitMessage {
+  margin-top: 50px;
+}
+
+#passstrength {
+  position: relative;
+  top: 75px;
+  left: 100px;
+  font-size: 12px;
+}
+
+.user {
+  font-size: 14px;
+  text-align: center;
+}
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  color: white;
+  background: rgb(51,51,51);
+}
+
+footer div {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+footer ul {
+  display: inline-block;
+  margin-left: 100px;
+  list-style: none;
+}
+
+footer ul li {
+  padding: 5px;
+}
+
+footer a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+
+
+
+/* 
+  Nav bar hiding css
+*/
+header {
+    background: rgb(51,51,51);
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    z-index: 1;
+}
+.default {
+    top: 0;
+}
+.fixed {
+    top: -80px;
+}
