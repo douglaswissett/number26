@@ -1,5 +1,37 @@
 
 
+@media screen and (max-width: 1060px) {
+
+  .form-header {
+    display: block;
+    float: none;
+    margin: 75px auto 0;
+  }
+
+  #form {
+    float: none;
+  }
+
+  #formNext {
+    margin-left: 60px;
+  }
+
+  #preview {
+    margin: 0;
+    margin-left: 185px;
+  }
+
+  #profile-header {
+    text-align: right !important;
+  }
+
+  #formBack3 {
+    top: -40px;
+    left: 100px;
+  }
+}
+
+
 /*
     Tablet Devices Rescale
 */
@@ -53,6 +85,18 @@
 
   .submitMessage {
     text-align: center;
+  }
+
+  #profile-header {
+    text-align: center !important;
+  }
+
+  #preview {
+    margin: 0 auto;
+  }
+
+  #formBack2 {
+    margin-left: 120px;
   }
 }
 
@@ -122,6 +166,7 @@
 
   #formBack3 {
     left: 50px;
+    top: -16px;
   }
 
   #submit {
@@ -151,6 +196,14 @@
 
   .bobLi {
     font-size: 12px;
+  }
+
+  #preview {
+    margin: 0 auto;
+  }
+
+  #profile-header {
+    text-align: center !important;
   }
 }
 

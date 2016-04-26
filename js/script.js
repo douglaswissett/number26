@@ -106,9 +106,9 @@ $(document).ready(() => {
       return; 
     }
 
-    // check user is over 18 to sign up
+    // check user is over 18 to sign up & blank
     let age = getAge(form.dob.value);
-    if(age < 18) {
+    if(age < 18 || $('#dob').val() == "") {
       
       let div = $('<div>').addClass('user');
       div.append('<p>Please make sure you\'ve entered a valid date of birth and you\'re over 18 - unfortunately the Rubik Bear eats children</p>');
