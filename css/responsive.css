@@ -29,6 +29,10 @@
   header {
     height: 200px;
   }
+  
+  .form-div {
+    margin: 1100px auto 0;
+  }
 
   .form-header {
     display: block;
